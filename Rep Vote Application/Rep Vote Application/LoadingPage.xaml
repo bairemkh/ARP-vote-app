@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Rep_Vote_Application.LoadingPage"
+             NavigationPage.HasNavigationBar="False"
+             BackgroundColor="#BB2424"
+             >
+
+    <ContentPage.Content VerticalOptions="Center" >
+        <StackLayout BackgroundColor="#BB2424" VerticalOptions="Center">
+            <Image Source="coat_of_arms_of_tunisia" Aspect="AspectFit" HeightRequest="100" HorizontalOptions="Center"/>
+            
+            <ActivityIndicator Color="White" IsRunning="True" />
+        </StackLayout>
+            
+      
+    </ContentPage.Content>
+</ContentPage>

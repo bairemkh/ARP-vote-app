@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:ViewModels="clr-namespace:Rep_Vote_Application.ViewModels"
+             x:Class="Rep_Vote_Application.Views.Admin_Views.VotingPage">
+    <NavigationPage.TitleView>
+        <Grid ColumnSpacing="20" Margin="0,0,10,0" HeightRequest="50">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="auto"/>
+                <ColumnDefinition Width="50"/>
+
+            </Grid.ColumnDefinitions>
+           
+			<Grid.BindingContext>
+				<ViewModels:UserViewModel/>
+			</Grid.BindingContext>
+            
+            <Label Text="{Binding NameAndLastName}" Grid.Column="1" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" VerticalOptions="Center" HorizontalOptions="Center" TextColor="White" x:Name="NameAndLastName"/>
+            <Frame Grid.Column="2" CornerRadius="80" Padding="1,1,1,1">
+                <Image Source="{Binding UserImage}" VerticalOptions="Center" />
+            </Frame>
+        </Grid>
+    </NavigationPage.TitleView>
+    <ContentPage.Background>
+        <LinearGradientBrush EndPoint="0,1">
+			<LinearGradientBrush.GradientStops>
+				<GradientStopCollection>
+					<GradientStop Color="DarkRed" Offset="0"/>
+					<GradientStop Color="#BB2424" Offset="1"/>
+				</GradientStopCollection>
+			</LinearGradientBrush.GradientStops>
+        </LinearGradientBrush>
+    </ContentPage.Background>
+        <ScrollView>
+            <StackLayout VerticalOptions="Center">
+                <Frame BackgroundColor="White" HasShadow="True" Margin="10,10,10,10" CornerRadius="20" >
+                    <StackLayout VerticalOptions="Center">
+                        <Grid RowSpacing="40">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="auto"/>
+                                <RowDefinition Height="auto"/>
+                                <RowDefinition Height="auto"/>
+                                <RowDefinition Height="auto"/>
+                                <RowDefinition Height="auto"/>
+                                <RowDefinition Height="auto"/>
+                            </Grid.RowDefinitions>                            
+                            <Label Text="{Binding LawDesc}" HorizontalOptions="Center" Grid.Row="0" FontSize="20" FontAttributes="Bold" TextColor="Black" x:Name="LawTitle">
+								<Label.BindingContext>
+									<ViewModels:VotingRoomViewModel/>
+								</Label.BindingContext>
+                            </Label>
+                            <Label Text="{Binding VoteSubject}" HorizontalOptions="Center" Grid.Row="1" x:Name="VoteSubject">
+								<Label.BindingContext>
+									<ViewModels:VotingRoomViewModel/>
+								</Label.BindingContext>
+                            </Label>
+                            <Button Grid.Row="2" Margin="0,10,0,0" Text="Yes" FontSize="Large" HeightRequest="70" BackgroundColor="#539817" TextColor="White" CornerRadius="30" x:Name="VotedYes" Clicked="VotedYes_Clicked"/>
+                        <Button Grid.Row="3"  Text="No" FontSize="Large" HeightRequest="70" BackgroundColor="#9F2323" TextColor="White" CornerRadius="30" x:Name="VotedNo" Clicked="VotedNo_Clicked"/>
+                        <Button Grid.Row="4"  Text="Retained" FontSize="Large" HeightRequest="70" BackgroundColor="#0E8C90" TextColor="White" CornerRadius="30" x:Name="VotedRetained" Clicked="VotedRetained_Clicked"/>
+                            <Frame BorderColor="Gray" Grid.Row="5" CornerRadius="20">
+                                <Label Text="" HorizontalOptions="Center" FontSize="25" x:Name="Timer"/>
+                            </Frame>
+                        </Grid>
+                    </StackLayout>
+                </Frame>
+
+
+            </StackLayout>
+        </ScrollView>
+</ContentPage>

@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Pages:PopupPage  xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:Pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup"
+             x:Class="Projet_Pfe.Views.PopUp"
+             xmlns:sys="clr-namespace:System;assembly=mscorlib" 
+            >
+    
+    
+    <Frame Padding="5,5,5,5" VerticalOptions="Center" HasShadow="True" CornerRadius="20" Margin="5,0,5,0"  BackgroundColor="#BB2424">
+        
+        <ScrollView>
+            <Grid VerticalOptions="Center" RowSpacing="25"  >
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                </Grid.RowDefinitions>
+
+                <Label Text="Create A voting Session" HorizontalOptions="Center" FontSize="25" Grid.Row="0" Grid.ColumnSpan="2" FontAttributes="Bold" VerticalOptions="Center"  Margin="0,20,0,0" TextColor="White"/>
+                <StackLayout Grid.Row="1" Grid.Column="0" VerticalOptions="Center">
+                    <Label Text="Select the Law Chapter" TextColor="White"/>
+                    <Frame CornerRadius="10" HasShadow="False" BackgroundColor="White" Padding="10,0,10,0">
+                        <Entry MaxLength="2" Keyboard="Numeric" x:Name="LawChapterVal" TextChanged="LawChapterVal_TextChanged"/>
+                    </Frame>
+                    
+                </StackLayout>
+                <StackLayout Grid.Row="1" Grid.Column="1"  VerticalOptions="Center">
+                    <Label Text="Select the Law Number" TextColor="White"/>
+                    <Frame CornerRadius="10" HasShadow="False" BackgroundColor="White" Padding="10,0,10,0">
+                        <Entry MaxLength="2"  Keyboard="Numeric"  x:Name="LawNumberVal" TextChanged="LawNumberVal_TextChanged"/>
+                    </Frame>
+                </StackLayout>
+                <StackLayout Grid.Row="4" Grid.ColumnSpan="2">
+                    <Label Text="Type The Vote Subject" HorizontalOptions="Center" TextColor="White"/>
+                    <Frame CornerRadius="10" HasShadow="False" BackgroundColor="White" Padding="10,0,10,0">
+                        <Editor HeightRequest="80" x:Name="VoteSubject" TextChanged="VoteSubject_TextChanged"/>
+                    </Frame>
+                </StackLayout>
+                <!--#region CheckBox Plannifed Session-->
+                <StackLayout Grid.Row="5" Grid.ColumnSpan="2" VerticalOptions="Center">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="30"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <CheckBox Grid.Column="0" VerticalOptions="Center" Color="White" CheckedChanged="CheckBox_CheckedChanged" x:Name="PlannedCheckBox" IsEnabled="False"/>
+                        <Label Text="Do You Want A plannified Session ?" Grid.Column="1" VerticalOptions="Center" TextColor="White"/>
+                    </Grid>
+
+                </StackLayout>
+                <!--#endregion-->
+                <!--#region Plannifed Session-->
+                <StackLayout Grid.Row="6" Grid.ColumnSpan="2" VerticalOptions="Center" x:Name="IfPlannedSession" IsVisible="false">
+                    <Grid VerticalOptions="Center" >
+                        <StackLayout Grid.Row="0" Grid.Column="0" HorizontalOptions="Fill" VerticalOptions="Center">
+
+                            <Label Text="Pick a date " TextColor="White"/>
+                            <Frame CornerRadius="10" HasShadow="False" BackgroundColor="White" Padding="10,0,10,0">
+                                <DatePicker MinimumDate="{x:Static sys:DateTime.Today}"  x:Name="DatePlanned" x:DataType="sys:DateTime"/>
+                            </Frame>
+                        </StackLayout>
+                        <StackLayout Grid.Row="0" Grid.Column="1" HorizontalOptions="Fill" VerticalOptions="Center">
+                            <Label Text="Pick a Time " TextColor="White"/>
+                            <Frame CornerRadius="10" HasShadow="False" BackgroundColor="White" Padding="10,0,10,0">
+                                <TimePicker x:Name="TimePlanned" x:DataType="sys:DateTime" />
+                            </Frame>
+                        </StackLayout>
+
+                    </Grid>
+                </StackLayout>
+                <!--#endregion-->
+
+                <Button Text="Cancel" Clicked="CancelBtn_Clicked" Grid.Row="7" Grid.Column="0"   VerticalOptions="Center" CornerRadius="10" BackgroundColor="White" TextColor="#BB2424" x:Name="CancelBtn"/>
+                <Button Text="Confirm" Clicked="ConfirmBtn_Clicked" Grid.Row="7" Grid.Column="1"   VerticalOptions="Center" CornerRadius="10" BackgroundColor="White" TextColor="#BB2424" x:Name="ConfirmBtn"/>
+                <Label x:Name="DisplayLaw"  Grid.Row="2" Grid.ColumnSpan="2" HorizontalOptions="Center" VerticalOptions="Center" FontAttributes="Bold" TextColor="White" />
+                <StackLayout Grid.Row="3" Grid.ColumnSpan="2" VerticalOptions="Center">
+                    <Label Text="Law Duration: " HorizontalOptions="Center" VerticalOptions="Center" x:Name="DisplayDuration" TextColor="White"/>
+                    <Stepper Increment="1" Value="5" Maximum="30" Minimum="1" x:Name="DurationStepper" HorizontalOptions="Center" ValueChanged="DurationStepper_ValueChanged"/>
+                </StackLayout>
+            </Grid>
+        </ScrollView>
+    </Frame>
+</Pages:PopupPage> 

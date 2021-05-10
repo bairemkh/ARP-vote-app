@@ -1,0 +1,46 @@
+C:\Users\Bairemkh\Desktop\PFE\projet\Rep Vote Application\Rep Vote Application\Rep Vote Application\obj\Debug\netstandard2.0\App.xaml.g.cs
+C:\Users\Bairemkh\Desktop\PFE\projet\Rep Vote Application\Rep Vote Application\Rep Vote Application\obj\Debug\netstandard2.0\Views\Common Views\LoginPage.xaml.g.cs
+C:\Users\Bairemkh\Desktop\PFE\projet\Rep Vote Application\Rep Vote Application\Rep Vote Application\obj\Debug\netstandard2.0\Views\User Views\UserMainPage.xaml.g.cs
+C:\Users\Bairemkh\Desktop\PFE\projet\Rep Vote Application\Rep Vote Application\Rep Vote Application\obj\Debug\netstandard2.0\Views\User Views\VotingPage.xaml.g.cs
+C:\Users\Bairemkh\Desktop\PFE\projet\Rep Vote Application\Rep Vote Application\Rep Vote Application\obj\Debug\netstandard2.0\Rep Vote Application.AssemblyInfoInputs.cache
+C:\Users\Bairemkh\Desktop\PFE\projet\Rep Vote Application\Rep Vote Application\Rep Vote Application\obj\Debug\netstandard2.0\Rep Vote Application.AssemblyInfo.cs
+C:\Users\Bairemkh\Desktop\PFE\projet\Rep Vote Application\Rep Vote Application\Rep Vote Application\obj\Debug\netstandard2.0\Rep Vote Application.csproj.CoreCompileInputs.cache
+C:\Users\Bairemkh\Desktop\PFE\projet\Rep Vote Application\Rep Vote Application\Rep Vote Application\obj\Debug\netstandard2.0\Rep Vote Application.dll
+C:\Users\Bairemkh\Desktop\PFE\projet\Rep Vote Application\Rep Vote Application\Rep Vote Application\obj\Debug\netstandard2.0\ref\Rep Vote Application.dll
+C:\Users\Bairemkh\Desktop\PFE\projet\Rep Vote Application\Rep Vote Application\Rep Vote Application\obj\Debug\netstandard2.0\Rep Vote Application.pdb
+C:\Users\Bairemkh\Desktop\PFE\projet\Rep Vote Application\Rep Vote Application\Rep Vote Application\bin\Debug\netstandard2.0\Rep Vote Application.deps.json
+C:\Users\Bairemkh\Desktop\PFE\projet\Rep Vote Application\Rep Vote Application\Rep Vote Application\bin\Debug\netstandard2.0\Rep Vote Application.dll
+C:\Users\Bairemkh\Desktop\PFE\projet\Rep Vote Application\Rep Vote Application\Rep Vote Application\bin\Debug\netstandard2.0\ref\Rep Vote Application.dll
+C:\Users\Bairemkh\Desktop\PFE\projet\Rep Vote Application\Rep Vote Application\Rep Vote Application\bin\Debug\netstandard2.0\Rep Vote Application.pdb
+C:\Users\Bairemkh\Desktop\PFE\projet\Rep Vote Application\Rep Vote Application\Rep Vote Application\obj\Debug\netstandard2.0\XamlC.stamp
+C:\Users\Bairemkh\Desktop\PFE\projet\Rep Vote Application\Rep Vote Application\Rep Vote Application\obj\Debug\netstandard2.0\Views\Admin Views\AdminMainPage.xaml.g.cs
+C:\Users\Bairemkh\Desktop\PFE\projet\Rep Vote Application\Rep Vote Application\Rep Vote Application\obj\Debug\netstandard2.0\Views\Admin Views\PopUp.xaml.g.cs
+C:\Users\Bairemkh\Desktop\PFE\projet\Rep Vote Application\Rep Vote Application\Rep Vote Application\obj\Debug\netstandard2.0\Views\Common Views\Result.xaml.g.cs
+C:\Users\Bairemkh\Desktop\PFE\projet\Rep Vote Application\Rep Vote Application\Rep Vote Application\obj\Debug\netstandard2.0\Views\Common Views\WaitingPage.xaml.g.cs
+C:\Users\Bairemkh\Desktop\PFE\projet\Rep Vote Application\Rep Vote Application\Rep Vote Application\obj\Debug\netstandard2.0\LoadingPage.xaml.g.cs
+C:\Users\Bairemkh\Desktop\PFE\projet\Rep Vote Application\Rep Vote Application\Rep Vote Application\obj\Debug\netstandard2.0\Rep Vote Application.csprojAssemblyReference.cache
+C:\Users\Bairemkh\Desktop\PFE\projet\Rep Vote Application\Rep Vote Application\Rep Vote Application\obj\Debug\netstandard2.0\Views\Loading Pages\ResultPageLoading.xaml.g.cs
+C:\Users\Bairemkh\Desktop\PFE\projet\Rep Vote Application\Rep Vote Application\Rep Vote Application\obj\Debug\netstandard2.0\Views\Loading Pages\CreatingSessionLoading Page.xaml.g.cs
+C:\Users\Bairemkh\Desktop\Rep Vote Application\Rep Vote Application\Rep Vote Application\bin\Debug\netstandard2.0\Rep Vote Application.deps.json
+C:\Users\Bairemkh\Desktop\Rep Vote Application\Rep Vote Application\Rep Vote Application\bin\Debug\netstandard2.0\Rep Vote Application.dll
+C:\Users\Bairemkh\Desktop\Rep Vote Application\Rep Vote Application\Rep Vote Application\bin\Debug\netstandard2.0\ref\Rep Vote Application.dll
+C:\Users\Bairemkh\Desktop\Rep Vote Application\Rep Vote Application\Rep Vote Application\bin\Debug\netstandard2.0\Rep Vote Application.pdb
+C:\Users\Bairemkh\Desktop\Rep Vote Application\Rep Vote Application\Rep Vote Application\obj\Debug\netstandard2.0\Rep Vote Application.csprojAssemblyReference.cache
+C:\Users\Bairemkh\Desktop\Rep Vote Application\Rep Vote Application\Rep Vote Application\obj\Debug\netstandard2.0\App.xaml.g.cs
+C:\Users\Bairemkh\Desktop\Rep Vote Application\Rep Vote Application\Rep Vote Application\obj\Debug\netstandard2.0\LoadingPage.xaml.g.cs
+C:\Users\Bairemkh\Desktop\Rep Vote Application\Rep Vote Application\Rep Vote Application\obj\Debug\netstandard2.0\Views\Admin Views\AdminMainPage.xaml.g.cs
+C:\Users\Bairemkh\Desktop\Rep Vote Application\Rep Vote Application\Rep Vote Application\obj\Debug\netstandard2.0\Views\Admin Views\PopUp.xaml.g.cs
+C:\Users\Bairemkh\Desktop\Rep Vote Application\Rep Vote Application\Rep Vote Application\obj\Debug\netstandard2.0\Views\Common Views\LoginPage.xaml.g.cs
+C:\Users\Bairemkh\Desktop\Rep Vote Application\Rep Vote Application\Rep Vote Application\obj\Debug\netstandard2.0\Views\Common Views\Result.xaml.g.cs
+C:\Users\Bairemkh\Desktop\Rep Vote Application\Rep Vote Application\Rep Vote Application\obj\Debug\netstandard2.0\Views\Common Views\WaitingPage.xaml.g.cs
+C:\Users\Bairemkh\Desktop\Rep Vote Application\Rep Vote Application\Rep Vote Application\obj\Debug\netstandard2.0\Views\Loading Pages\CreatingSessionLoading Page.xaml.g.cs
+C:\Users\Bairemkh\Desktop\Rep Vote Application\Rep Vote Application\Rep Vote Application\obj\Debug\netstandard2.0\Views\Loading Pages\ResultPageLoading.xaml.g.cs
+C:\Users\Bairemkh\Desktop\Rep Vote Application\Rep Vote Application\Rep Vote Application\obj\Debug\netstandard2.0\Views\User Views\UserMainPage.xaml.g.cs
+C:\Users\Bairemkh\Desktop\Rep Vote Application\Rep Vote Application\Rep Vote Application\obj\Debug\netstandard2.0\Views\User Views\VotingPage.xaml.g.cs
+C:\Users\Bairemkh\Desktop\Rep Vote Application\Rep Vote Application\Rep Vote Application\obj\Debug\netstandard2.0\Rep Vote Application.AssemblyInfoInputs.cache
+C:\Users\Bairemkh\Desktop\Rep Vote Application\Rep Vote Application\Rep Vote Application\obj\Debug\netstandard2.0\Rep Vote Application.AssemblyInfo.cs
+C:\Users\Bairemkh\Desktop\Rep Vote Application\Rep Vote Application\Rep Vote Application\obj\Debug\netstandard2.0\Rep Vote Application.csproj.CoreCompileInputs.cache
+C:\Users\Bairemkh\Desktop\Rep Vote Application\Rep Vote Application\Rep Vote Application\obj\Debug\netstandard2.0\XamlC.stamp
+C:\Users\Bairemkh\Desktop\Rep Vote Application\Rep Vote Application\Rep Vote Application\obj\Debug\netstandard2.0\Rep Vote Application.dll
+C:\Users\Bairemkh\Desktop\Rep Vote Application\Rep Vote Application\Rep Vote Application\obj\Debug\netstandard2.0\ref\Rep Vote Application.dll
+C:\Users\Bairemkh\Desktop\Rep Vote Application\Rep Vote Application\Rep Vote Application\obj\Debug\netstandard2.0\Rep Vote Application.pdb

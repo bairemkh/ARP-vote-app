@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Rep_Vote_Application.Views.Common_Views.ResultPageLoading"
+             BackgroundColor="#BB2424"
+             NavigationPage.HasNavigationBar="False">
+    <ContentPage.Content>
+        <StackLayout BackgroundColor="#BB2424" VerticalOptions="Center">
+           
+            <ActivityIndicator Color="White" IsRunning="True" />
+            <Label Text="Calculating" TextColor="White" HorizontalOptions="Center"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

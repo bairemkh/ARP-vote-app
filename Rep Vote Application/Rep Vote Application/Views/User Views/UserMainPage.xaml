@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:ViewModels="clr-namespace:Rep_Vote_Application.ViewModels"
+             NavigationPage.HasNavigationBar="False"
+             x:Class="Rep_Vote_Application.Views.Admin_Views.UserMainPage">
+    <ContentPage.Background>
+        <LinearGradientBrush EndPoint="0,1">
+			<LinearGradientBrush.GradientStops>
+				<GradientStopCollection>
+					<GradientStop Color="DarkRed" Offset="0"/>
+					<GradientStop Color="#BB2424" Offset="1"/>
+				</GradientStopCollection>
+			</LinearGradientBrush.GradientStops>
+        </LinearGradientBrush>
+    </ContentPage.Background>
+    
+        <ScrollView>
+            <Frame HasShadow="True" CornerRadius="20" Margin="10,10,10,10">
+                <StackLayout>
+                    <Grid  VerticalOptions="Start" RowSpacing="12">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="auto"/>
+                            <RowDefinition Height="auto"/>
+                            <RowDefinition Height="auto"/>
+                        </Grid.RowDefinitions>
+
+                        <StackLayout Grid.Row="0" >
+                            <!--#region User Avatar-->
+                            
+                                <Image  x:Name="UserAvatar" VerticalOptions="Center" Source="{Binding UserImage}" Aspect="AspectFill" Margin="0,0,0,0" >
+                                    <Image.Clip>
+                                        <EllipseGeometry RadiusX="150" RadiusY="150" Center="150,150"/>
+                                    </Image.Clip>
+                            <Image.BindingContext>
+                                <ViewModels:UserViewModel/>
+                            </Image.BindingContext>
+                                </Image>
+
+                            
+                            <!--#endregion-->
+                            <Frame BackgroundColor="White" Margin="10,-50,10,0" CornerRadius="5">
+                                <StackLayout>
+									<StackLayout.BindingContext>
+										<ViewModels:UserViewModel/>
+									</StackLayout.BindingContext>
+                                    <Label Text="{Binding NameAndLastName}" HorizontalOptions="Center" x:Name="UserNameAndLastName"/>
+                                    <Label Text="{Binding UserPoliticalParty}" HorizontalOptions="Center" x:Name="UserPol"/>
+                                </StackLayout>
+                            </Frame>
+                        </StackLayout>
+
+                        
+                        <StackLayout Grid.Row="1">
+
+                            <!--#endregion-->
+                        <!--#region State-->
+                            <Label Text="Session Actif" HorizontalOptions="Center"  TextColor="Green" FontSize="Caption" x:Name="IsActif" IsVisible="False"/>
+                            <!--#endregion-->
+                            <Button Text="Join Room" x:Name="JoinRoomBtn"  BackgroundColor="#BB2424" TextColor="White" CornerRadius="15" VerticalOptions="Center"  Clicked="JoinRoomBtn_Clicked" IsEnabled="False"/>
+                        <ActivityIndicator Color="#BB2424" IsRunning="True" IsVisible="False" x:Name="LoadingJoinBtn"/>
+                        <!--#region Timer -->
+
+                            <Label  x:Name="AppTimer"  HorizontalOptions="Center" TextColor="Black" FontSize="Micro"/>
+
+                        </StackLayout>
+                        <StackLayout Grid.Row="2">
+
+                            <Label Text="You can browse History" HorizontalOptions="Center"  TextColor="Black" FontSize="Caption"/>
+
+                            <Button Text="History" x:Name="HistoryBtn"  IsEnabled="False" BackgroundColor="#BB2424" TextColor="White" CornerRadius="15" VerticalOptions="Center"/>
+
+                        </StackLayout>
+                        <Button Text="Logout" x:Name="LogoutBtn"  BackgroundColor="White" TextColor="#BB2424" CornerRadius="15" VerticalOptions="End" Grid.Row="3" Clicked="LogoutBtn_Clicked"/>
+
+
+                    </Grid>
+                </StackLayout>
+
+            </Frame>
+        </ScrollView>
+</ContentPage>

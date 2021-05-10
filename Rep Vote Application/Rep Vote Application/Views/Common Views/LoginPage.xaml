@@ -1,0 +1,110 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             NavigationPage.HasNavigationBar="False"
+             x:Class="Rep_Vote_Application.Views.LoginPage">
+    <ContentPage.Background>
+        <LinearGradientBrush EndPoint="0,1">
+            <GradientStopCollection>
+                <GradientStop Color="White" Offset="0.5"/>
+                <GradientStop Color="#BB2424" Offset="1.5"/>
+            </GradientStopCollection>
+        </LinearGradientBrush>
+    </ContentPage.Background>
+    <ContentPage.Content>
+
+        <ScrollView>
+
+
+
+            <StackLayout VerticalOptions="Center">
+
+
+
+                <Grid RowSpacing="30" VerticalOptions="Fill">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+
+                    </Grid.RowDefinitions>
+
+                    <Image Source="Blood.png" HeightRequest="100" Grid.Row="0" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" Margin="0,20,0,20"/>
+
+
+                    <Label Text="مجلس نواب الشعب" HorizontalOptions="Center" Grid.Row="1" VerticalOptions="Center" TextColor="Red" IsVisible="True" FontSize="Body" Margin="0,-70,0,0"/>
+                    <StackLayout BackgroundColor="Transparent" Grid.Row="2" VerticalOptions="FillAndExpand">
+                        <Grid RowSpacing="30">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="auto"/>
+                                <RowDefinition Height="auto"/>
+                            </Grid.RowDefinitions>
+                            <Frame Grid.Row="0"  HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" CornerRadius="20" HasShadow="True" Margin="10,0,10,0" BackgroundColor="#BB2424">
+                                <Grid RowSpacing="30" VerticalOptions="Center">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="auto"/>
+                                        <RowDefinition Height="auto"/>
+                                        <RowDefinition Height="auto"/>
+                                        <RowDefinition Height="auto"/>
+                                    </Grid.RowDefinitions>
+                                    <Label Text="SIGN IN" HorizontalOptions="Center" TextColor="White" Grid.Row="0"/>
+                                    <!-- #region Card Number Entry-->
+                                    <Frame  Grid.Row="1" VerticalOptions="Center" CornerRadius="10" Padding="0,0,0,0" HasShadow="False">
+                                        <StackLayout VerticalOptions="Center">
+                                            <Grid HeightRequest=" 50">
+                                                <Grid.ColumnDefinitions>
+                                                    <ColumnDefinition Width="50"/>
+                                                    <ColumnDefinition Width="*"/>
+                                                </Grid.ColumnDefinitions>
+
+                                                <Path Data="m21.25 3h-18.5c-1.517 0-2.75 1.233-2.75 2.75v12.5c0 1.517 1.233 2.75 2.75 2.75h18.5c1.517 0 2.75-1.233 2.75-2.75v-12.5c0-1.517-1.233-2.75-2.75-2.75zm-13.75 4c1.378 0 2.5 1.122 2.5 2.5s-1.122 2.5-2.5 2.5-2.5-1.122-2.5-2.5 1.122-2.5 2.5-2.5zm4.5 9.25c0 .414-.336.75-.75.75h-7.5c-.414 0-.75-.336-.75-.75v-.5c0-1.517 1.233-2.75 2.75-2.75h3.5c1.517 0 2.75 1.233 2.75 2.75zm8.25.75h-5.5c-.414 0-.75-.336-.75-.75s.336-.75.75-.75h5.5c.414 0 .75.336.75.75s-.336.75-.75.75zm0-4h-5.5c-.414 0-.75-.336-.75-.75s.336-.75.75-.75h5.5c.414 0 .75.336.75.75s-.336.75-.75.75zm0-4h-5.5c-.414 0-.75-.336-.75-.75s.336-.75.75-.75h5.5c.414 0 .75.336.75.75s-.336.75-.75.75z" 
+                                                          Fill="#BB2424" Aspect="Uniform" HorizontalOptions="Center"  Grid.Column="0"/>
+
+                                                <Entry  HorizontalOptions="Fill" VerticalOptions="Center" Placeholder="Your card number" Margin="0,0,20,0" PlaceholderColor="DarkGray" Grid.Column="1" x:Name="UserCardNumber" Keyboard="Numeric"/>
+                                            </Grid>
+                                        </StackLayout>
+                                    </Frame>
+                                    <!--#endregion-->
+                                    <!--#region Password Entry-->
+                                    <Frame Grid.Row="2" VerticalOptions="Center" CornerRadius="10" Padding="0,0,0,0" HasShadow="False">
+                                        <StackLayout VerticalOptions="Center">
+                                            <Grid HeightRequest=" 50">
+                                                <Grid.ColumnDefinitions>
+                                                    <ColumnDefinition Width="50"/>
+                                                    <ColumnDefinition Width="*"/>
+                                                </Grid.ColumnDefinitions>
+                                                <Frame  Grid.Column="0" Padding="10,10,10,10" HasShadow="False">
+                                                    <Path Data="M437.333,192h-32v-42.667C405.333,66.99,338.344,0,256,0S106.667,66.99,106.667,149.333V192h-32    C68.771,192,64,196.771,64,202.667v266.667C64,492.865,83.135,512,106.667,512h298.667C428.865,512,448,492.865,448,469.333    V202.667C448,196.771,443.229,192,437.333,192z M287.938,414.823c0.333,3.01-0.635,6.031-2.656,8.292    c-2.021,2.26-4.917,3.552-7.948,3.552h-42.667c-3.031,0-5.927-1.292-7.948-3.552c-2.021-2.26-2.99-5.281-2.656-8.292l6.729-60.51    c-10.927-7.948-17.458-20.521-17.458-34.313c0-23.531,19.135-42.667,42.667-42.667s42.667,19.135,42.667,42.667    c0,13.792-6.531,26.365-17.458,34.313L287.938,414.823z M341.333,192H170.667v-42.667C170.667,102.281,208.948,64,256,64    s85.333,38.281,85.333,85.333V192z"
+                                                          Fill="#BB2424" Aspect="Uniform" HorizontalOptions="Center"  Grid.Column="0"/>
+                                                </Frame>
+                                                <Entry  HorizontalOptions="Fill" VerticalOptions="Center" Placeholder="Your Password" Margin="0,0,20,0" PlaceholderColor="DarkGray" Grid.Column="1" x:Name="UserPassword" IsPassword="True" Keyboard="Plain"/>
+                                            </Grid>
+                                        </StackLayout>
+                                    </Frame>
+                                    <!--#endregion-->
+                                    <Button Grid.Row="3" BackgroundColor="White" Text="Sign In" HorizontalOptions="FillAndExpand" CornerRadius="20" Margin="20,0,20,0" TextColor="#BB2424" Clicked="Loginbtn_Clicked" x:Name="Loginbtn"/>
+                                    <ActivityIndicator Color="White" IsRunning="True" IsVisible="False" x:Name="Loading" Grid.Row="3"/>
+                                    <Image Source="Coat_of_arms_of_Tunisia.png" Grid.Row="4" HeightRequest="100"/>
+                                </Grid>
+                            </Frame>
+                            <Grid Grid.Row="1" HorizontalOptions="Center" Margin="0,0,0,15">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="100"/>
+                                    <ColumnDefinition Width="100"/>
+                                    <ColumnDefinition Width="100"/>
+                                </Grid.ColumnDefinitions>
+                                <Label Text="English" Grid.Column="0" TextColor="White" HorizontalOptions="Center"/>
+                                <Label Text="العربية" Grid.Column="1" TextColor="White" HorizontalOptions="Center"/>
+                                <Label Text="Français" Grid.Column="2" TextColor="White" HorizontalOptions="Center"/>
+
+                            </Grid>
+                        </Grid>
+                    </StackLayout>
+
+
+                </Grid>
+            </StackLayout >
+
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
