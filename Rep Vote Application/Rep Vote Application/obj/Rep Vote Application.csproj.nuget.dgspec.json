@@ -50,6 +50,10 @@
               "target": "Package",
               "version": "[6.0.0-preview.3.21201.13, )"
             },
+            "Microsoft.Azure.CognitiveServices.Vision.Face": {
+              "target": "Package",
+              "version": "[2.7.0-preview.1, )"
+            },
             "NETStandard.Library": {
               "suppressParent": "All",
               "target": "Package",
@@ -75,6 +79,10 @@
             "System.Numerics.Vectors": {
               "target": "Package",
               "version": "[4.5.0, )"
+            },
+            "Xam.Plugin.Media": {
+              "target": "Package",
+              "version": "[5.0.1, )"
             },
             "Xamarin.Essentials": {
               "target": "Package",

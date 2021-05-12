@@ -1,2 +1,2 @@
-AdbTarget=-s BVK6R19C27000647
+AdbTarget=-s emulator-5554
 AdbOptions=

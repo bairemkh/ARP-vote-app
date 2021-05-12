@@ -36,7 +36,6 @@
                                 <Image.Clip>
                                     <EllipseGeometry RadiusX="150" RadiusY="150" Center="150,150"/>
                                 </Image.Clip>
-
                             </Image>
 
                         </Frame>
@@ -62,6 +61,7 @@
                                 <Label Text="You Can Create a vote session for the representatives" TextColor="Black" HorizontalOptions="Center" HorizontalTextAlignment="Center" FontSize="Micro" Grid.Row="1"/>
                                 <Button IsEnabled="False" Text="Voting History" Padding="0,0,0,0" BackgroundColor="#BB2424" TextColor="White" Margin="0,0,0,0" CornerRadius="10" Clicked="HistoryBtn_Clicked" Grid.Row="2" x:Name="HistoryBtn"/>
                                 <Label Text="You Can Navigate the vote sessions history" TextColor="Black" HorizontalOptions="Center" HorizontalTextAlignment="Center" FontSize="Micro" Grid.Row="3"/>
+                                <Button Text="Camera"  Command="{Binding TakeImage}" Padding="0,0,0,0" BackgroundColor="#BB2424" TextColor="White" Margin="0,0,0,0" CornerRadius="10" Grid.Row="4" x:Name="CameraBtn"/>
 
                             </Grid>
 

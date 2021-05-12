@@ -1,6 +1,7 @@
 ﻿using Projet_Pfe;
 using Projet_Pfe.Views;
 using Rep_Vote_Application.Helpers;
+using Rep_Vote_Application.Packages;
 using Rep_Vote_Application.Services;
 using Rep_Vote_Application.ViewModels;
 using Rg.Plugins.Popup.Services;
@@ -22,7 +23,8 @@ namespace Rep_Vote_Application.Views.Admin_Views
         public AdminMainPage()
         {
             InitializeComponent();
-            
+            BindingContext = new faceAPI();
+
         }
         
         private async void ToVoting(object sender, EventArgs e)
