@@ -13,6 +13,7 @@ namespace Rep_Vote_Application.ViewModels
 
         string vote = Getters.Vote;
         VoteSessionResult sessionResult = Getters.sessionResult;
+       
         public string Vote { get => vote;
             set
             {

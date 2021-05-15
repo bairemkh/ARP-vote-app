@@ -55,7 +55,7 @@
 									<ViewModels:VotingRoomViewModel/>
 								</Label.BindingContext>
                             </Label>
-                            <Button Grid.Row="2" Margin="0,10,0,0" Text="Yes" FontSize="Large" HeightRequest="70" BackgroundColor="#539817" TextColor="White" CornerRadius="30" x:Name="VotedYes" Clicked="VotedYes_Clicked"/>
+                        <Button Grid.Row="2" Margin="0,10,0,0" Text="Yes" FontSize="Large" HeightRequest="70" BackgroundColor="#539817" TextColor="White" CornerRadius="30" x:Name="VotedYes" Clicked="VotedYes_Clicked"/>
                         <Button Grid.Row="3"  Text="No" FontSize="Large" HeightRequest="70" BackgroundColor="#9F2323" TextColor="White" CornerRadius="30" x:Name="VotedNo" Clicked="VotedNo_Clicked"/>
                         <Button Grid.Row="4"  Text="Retained" FontSize="Large" HeightRequest="70" BackgroundColor="#0E8C90" TextColor="White" CornerRadius="30" x:Name="VotedRetained" Clicked="VotedRetained_Clicked"/>
                             <Frame BorderColor="Gray" Grid.Row="5" CornerRadius="20">

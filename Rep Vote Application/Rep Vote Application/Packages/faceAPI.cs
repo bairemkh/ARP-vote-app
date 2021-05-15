@@ -56,6 +56,7 @@ namespace Rep_Vote_Application.Packages
                    
                 }
 
+                
                 MediaFile photo = await CrossMedia.Current.TakePhotoAsync(new Plugin.Media.Abstractions.StoreCameraMediaOptions
                 {
                     CompressionQuality = 50,
@@ -69,10 +70,13 @@ namespace Rep_Vote_Application.Packages
                 
                 ImgSource = photo.GetStream();
                 
+                await FindSimilar(faceClient,ImgSource, RecognitionModel.Recognition04);
+
             }
             catch (Exception ex)
             {
                 await Application.Current.MainPage.DisplayAlert("Error", $"ERROR: {ex.Message}", "OK");
+                
             }
 
         }
@@ -81,13 +85,15 @@ namespace Rep_Vote_Application.Packages
         //Face detection
         private static async Task<List<DetectedFace>> DetectFaceRecognize(IFaceClient faceClient, Stream image, string recognition_model)
         {
+            
             IList<DetectedFace> detectedFace = await faceClient.Face.DetectWithStreamAsync(image, recognitionModel: recognition_model, detectionModel: DetectionModel.Detection03);
             Console.WriteLine($"{detectedFace.Count} face(s) detected from image");
+            
             return detectedFace.ToList();
         }
 
         //Face recognition
-        public static async Task FindSimilar(IFaceClient client, Stream Camera_photo, string recognition_model)
+        public static async Task<double> FindSimilar(IFaceClient client, Stream Camera_photo, string recognition_model)
         {
             Console.WriteLine("Face Recognition Started");
             Console.WriteLine();
@@ -101,7 +107,12 @@ namespace Rep_Vote_Application.Packages
             
             // Detect faces from target image
             var faces = await DetectFaceRecognize(client, targetImageFile, recognition_model);
-
+            
+            if (faces.Count > 1)
+            {
+                await Application.Current.MainPage.DisplayAlert("Error", $"they are {faces.Count} faces detected ,only one persone is allowed .", "OK");
+                return -1;
+            }
             // Add detected faceId to list of GUIDs.
             targetFaceIds.Add(faces[0].FaceId.Value);
 
@@ -114,9 +125,13 @@ namespace Rep_Vote_Application.Packages
            
             foreach (var similarResult in similarResults)
             {
-                Console.WriteLine($"Face ID:{similarResult.FaceId}  similar with confidence: {similarResult.Confidence}.");
+                //if(similarResult.Confidence)
+                await Application.Current.MainPage.DisplayAlert("Face recognition", $"The Tokken picture is similar to the picture in our database with {similarResult.Confidence}%.", "OK");
+                return similarResult.Confidence;
             }
-            Console.WriteLine();
+            if (similarResults.Count==0)
+                await Application.Current.MainPage.DisplayAlert("Error", "Face Not Recognized ,please try again", "Retry");
+            return 0.0;
         }
     }
 }

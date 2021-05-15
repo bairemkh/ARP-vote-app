@@ -58,44 +58,54 @@ namespace Rep_Vote_Application.Views.Admin_Views
         #region Yes
         private async void VotedYes_Clicked(object sender, EventArgs e)
         {
-            UserVote vote = new UserVote(Getters.CurrentUser.UserId, "Yes");
-            Getters.Vote = vote.Vote;
-          await WebApiConnection.CreateVote(vote);
-            var IsClosed = await WebApiConnection.IsVotingRoomClosed();
-            if (IsClosed)
-                await Navigation.PushAsync(new Result(), true);
-            else
-                await Navigation.PushAsync(new WaitingPage(), true);
+            var Action=await DisplayAlert("Confirmation", "Do you confirm your vote ? \n You Voted : Yes", "Yes i confirm my vote", "cancel");
+            if (Action) {
+                UserVote vote = new UserVote(Getters.CurrentUser.UserId, "Yes");
+                Getters.Vote = vote.Vote;
+                await WebApiConnection.CreateVote(vote);
+                var IsClosed = await WebApiConnection.IsVotingRoomClosed();
+                if (IsClosed)
+                    await Navigation.PushAsync(new Result(), true);
+                else
+                    await Navigation.PushAsync(new WaitingPage(), true);
+            }
+            
         }
         #endregion
 
         #region No
         private async void VotedNo_Clicked(object sender, EventArgs e)
         {
-
-            UserVote vote = new UserVote(Getters.CurrentUser.UserId, "No");
-            Getters.Vote = vote.Vote;
-            await WebApiConnection.CreateVote(vote);
-            var IsClosed = await WebApiConnection.IsVotingRoomClosed();
-            if (IsClosed)
-                await Navigation.PushAsync(new Result(), true);
-            else
-                await Navigation.PushAsync(new WaitingPage(), true);
+            var Action = await DisplayAlert("Confirmation", "Do you confirm your vote ? \n You Voted : No", "Yes i confirm my vote", "cancel");
+            if (Action)
+            {
+                UserVote vote = new UserVote(Getters.CurrentUser.UserId, "No");
+                Getters.Vote = vote.Vote;
+                await WebApiConnection.CreateVote(vote);
+                var IsClosed = await WebApiConnection.IsVotingRoomClosed();
+                if (IsClosed)
+                    await Navigation.PushAsync(new Result(), true);
+                else
+                    await Navigation.PushAsync(new WaitingPage(), true);
+            }
         }
         #endregion
 
         #region Retained
         private async void VotedRetained_Clicked(object sender, EventArgs e)
         {
-
-            UserVote vote = new UserVote(Getters.CurrentUser.UserId, "Retained");
-            Getters.Vote = vote.Vote;
-            await WebApiConnection.CreateVote(vote);
-            var IsClosed = await WebApiConnection.IsVotingRoomClosed();
-            if (IsClosed)
-                await Navigation.PushAsync(new Result(), true);
-            else
-                await Navigation.PushAsync(new WaitingPage(), true);
+            var Action = await DisplayAlert("Confirmation", "Do you confirm your vote ? \n You Voted : Retained", "Yes i confirm my vote", "cancel");
+            if (Action)
+            {
+                UserVote vote = new UserVote(Getters.CurrentUser.UserId, "Retained");
+                Getters.Vote = vote.Vote;
+                await WebApiConnection.CreateVote(vote);
+                var IsClosed = await WebApiConnection.IsVotingRoomClosed();
+                if (IsClosed)
+                    await Navigation.PushAsync(new Result(), true);
+                else
+                    await Navigation.PushAsync(new WaitingPage(), true);
+            }
         }
         #endregion
        
