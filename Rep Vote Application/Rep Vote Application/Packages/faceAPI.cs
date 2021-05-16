@@ -45,7 +45,7 @@ namespace Rep_Vote_Application.Packages
         {
             get { return takeImage ?? (takeImage = new Command(async () => await TakeImageAsync())); }
         }
-        public async Task TakeImageAsync()
+        public async Task<double> TakeImageAsync()
         {
             try
             {
@@ -70,13 +70,15 @@ namespace Rep_Vote_Application.Packages
                 
                 ImgSource = photo.GetStream();
                 
-                await FindSimilar(faceClient,ImgSource, RecognitionModel.Recognition04);
+                var x=await FindSimilar(faceClient,ImgSource, RecognitionModel.Recognition04);
+                
+                return x;
 
             }
             catch (Exception ex)
             {
                 await Application.Current.MainPage.DisplayAlert("Error", $"ERROR: {ex.Message}", "OK");
-                
+                return -2;
             }
 
         }
@@ -126,12 +128,12 @@ namespace Rep_Vote_Application.Packages
             foreach (var similarResult in similarResults)
             {
                 //if(similarResult.Confidence)
-                await Application.Current.MainPage.DisplayAlert("Face recognition", $"The Tokken picture is similar to the picture in our database with {similarResult.Confidence}%.", "OK");
+                await Application.Current.MainPage.DisplayAlert("Face recognition", $"Your vote has been confirmed now you can wait for others to complete vote", "OK");
                 return similarResult.Confidence;
             }
             if (similarResults.Count==0)
                 await Application.Current.MainPage.DisplayAlert("Error", "Face Not Recognized ,please try again", "Retry");
-            return 0.0;
+            return 0;
         }
     }
 }

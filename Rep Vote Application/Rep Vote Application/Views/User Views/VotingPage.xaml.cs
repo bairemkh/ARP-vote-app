@@ -4,6 +4,7 @@ using Projet_Pfe.Helpers;
 using Projet_Pfe.Views;
 using Rep_Vote_Application.Helpers;
 using Rep_Vote_Application.Views.Common_Views;
+using Rep_Vote_Application.Views.Loading_Pages;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -60,14 +61,7 @@ namespace Rep_Vote_Application.Views.Admin_Views
         {
             var Action=await DisplayAlert("Confirmation", "Do you confirm your vote ? \n You Voted : Yes", "Yes i confirm my vote", "cancel");
             if (Action) {
-                UserVote vote = new UserVote(Getters.CurrentUser.UserId, "Yes");
-                Getters.Vote = vote.Vote;
-                await WebApiConnection.CreateVote(vote);
-                var IsClosed = await WebApiConnection.IsVotingRoomClosed();
-                if (IsClosed)
-                    await Navigation.PushAsync(new Result(), true);
-                else
-                    await Navigation.PushAsync(new WaitingPage(), true);
+                await Navigation.PushAsync(new VotingLoadingPage("Yes"), true);
             }
             
         }
@@ -79,14 +73,7 @@ namespace Rep_Vote_Application.Views.Admin_Views
             var Action = await DisplayAlert("Confirmation", "Do you confirm your vote ? \n You Voted : No", "Yes i confirm my vote", "cancel");
             if (Action)
             {
-                UserVote vote = new UserVote(Getters.CurrentUser.UserId, "No");
-                Getters.Vote = vote.Vote;
-                await WebApiConnection.CreateVote(vote);
-                var IsClosed = await WebApiConnection.IsVotingRoomClosed();
-                if (IsClosed)
-                    await Navigation.PushAsync(new Result(), true);
-                else
-                    await Navigation.PushAsync(new WaitingPage(), true);
+                await Navigation.PushAsync(new VotingLoadingPage("No"), true);
             }
         }
         #endregion
@@ -97,14 +84,7 @@ namespace Rep_Vote_Application.Views.Admin_Views
             var Action = await DisplayAlert("Confirmation", "Do you confirm your vote ? \n You Voted : Retained", "Yes i confirm my vote", "cancel");
             if (Action)
             {
-                UserVote vote = new UserVote(Getters.CurrentUser.UserId, "Retained");
-                Getters.Vote = vote.Vote;
-                await WebApiConnection.CreateVote(vote);
-                var IsClosed = await WebApiConnection.IsVotingRoomClosed();
-                if (IsClosed)
-                    await Navigation.PushAsync(new Result(), true);
-                else
-                    await Navigation.PushAsync(new WaitingPage(), true);
+                await Navigation.PushAsync(new VotingLoadingPage("Retained"), true);
             }
         }
         #endregion
